@@ -12,6 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 
@@ -35,10 +36,10 @@ import jakarta.validation.constraints.Size;
 		@Size(min = 10, max = 100, message = "Tamanho mínimo: 10, maximo: 100")
 		private String console;
 		
-		@NotBlank(message = "O atributo Quantidade é Obrigatório")
+		@NotNull(message = "O atributo Quantidade é Obrigatório")
 		private int quantidade;
 		
-		@NotBlank(message = "O atributo preço é Obrigatório")
+		@NotNull(message = "O atributo preço é Obrigatório")
 		@Column(precision = 8, scale = 2) 
 		private BigDecimal preco;
 		
